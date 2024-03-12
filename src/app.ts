@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import cors from "cors";
-// import userRoutes from "./app/Modules/User/user.route";
+import bookRoutes from "./app/modules/books/routes.book";
 
 const app: Application = express();
 
@@ -9,6 +9,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/books", bookRoutes);
 
 export default app;
